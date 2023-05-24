@@ -1,30 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Registration Page</title>
+  <title>TedPrime Registration Page</title>
   
-  <script>
-    function validateForm() {
-      var email = document.forms["registrationForm"]["email"].value;
-      var phone = document.forms["registrationForm"]["phone"].value;
-
-      // Email validation
-      var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-      if (!emailRegex.test(email)) {
-        alert("Please enter a valid email address");
-        return false;
-      }
-
-    
-    }
-  </script>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
-  <h1>Registration Page</h1>
-
-  <form name="registrationForm" onsubmit="return validateForm()" method="post">
+  <h1 class="n">TedPrime Registration Page</h1>
+<div class="big-form">
+  <div class="small-form">
+  <form name="registrationForm" onsubmit="return validateForm()" method="post" action="assets/php/form.php">
   <label >Title: </label>
   <input type="text" id="title" name="title" required><br><br>
   <label>Your Full Name: </label>
@@ -47,7 +34,7 @@
     <label>Position Held </label>
     <label > <Em> Please write "Student" if applicable</Em> </label>
     <input type="text" id="Organization" name="Organization" required><br><br>
-    <P>Module Option (You can Select More than one)</P>
+    <P>Module Option:</P>
     <select name="more" id="coures" required><br><br>
         <option>Web Development</option>
         <option>Cybersecurity</option>
@@ -63,6 +50,8 @@
     <input type="submit" value="Register">
 
   </form>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  </div>
+  </div>
+  <script src="assets/script/fil.js"></script>
 </body>
 </html>

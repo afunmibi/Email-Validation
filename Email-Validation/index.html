@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Page</title>
+  
+  <script>
+    function validateForm() {
+      var email = document.forms["registrationForm"]["email"].value;
+      var phone = document.forms["registrationForm"]["phone"].value;
+
+      // Email validation
+      var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address");
+        return false;
+      }
+
+    
+    }
+  </script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>Registration Page</h1>
+
+  <form name="registrationForm" onsubmit="return validateForm()" method="post">
+  <label >Title: </label>
+  <input type="text" id="title" name="title" required><br><br>
+  <label>Your Full Name: </label>
+  <input type="text" id="Your Full Name" name="Your Full Name  " required><br><br>
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" required><br><br>
+    <label for="phone number">Your Phone Number:(+234)</label>
+    <input type="text" id="phone" name="phone" required><br><br>
+    <label for=" phone number">Your Guardians Phone Number:(+234)</label>
+    <input type="text" id="phone" name="phone" required><br><br>
+   
+    <p>Preference of Study</p>
+    <p>For Web Development (Front End) Applicants ONLY. Disregard if otherwise</p>
+    <li><input type="radio" name="study" value="study">Weekdays (Mondays, Wednesdays and Fridays)</li>
+    <li><input type="radio" name="study" value="study">   Weekends (Fridays and Saturdays)</li>
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" required></textarea>
+    <label > The Name of your Organization/School/Institution</label>
+    <input type="text" id="Organization" name="Organization" required><br><br>
+    <label>Position Held </label>
+    <label > <Em> Please write "Student" if applicable</Em> </label>
+    <input type="text" id="Organization" name="Organization" required><br><br>
+    <P>Module Option (You can Select More than one)</P>
+    <select name="more" id="coures" required><br><br>
+        <option>Web Development</option>
+        <option>Cybersecurity</option>
+        <option>Technology Literacy for Educators</option>
+        <option>Digital Literacy/Office Specialist Course</option>
+        <option>Core Programming/Python</option>
+        <option>Graphics & UI Designs</option>
+        <option>STEM Club (For Teens) - Saturday Classes</option>
+    </select>
+    <p>Preferred Class</p>
+    <li><input type="radio" name="yyy" value="yyy">Online</li>
+    <li><input type="radio" name="yyy" value="yyy">Offline</li>
+    <input type="submit" value="Register">
+
+  </form>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+</html>
